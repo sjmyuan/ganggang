@@ -26,3 +26,4 @@ deploy:
   bucket: sjmyuan-ganggang 
   skip_cleanup: true
   local_dir: public
+  region: ap-northeast-1
