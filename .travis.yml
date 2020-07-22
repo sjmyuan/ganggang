@@ -1,0 +1,28 @@
+language: node_js
+sudo: required
+node_js: 
+  - 12.9.1
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g hexo-cli
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo generate
+
+deploy:
+  provider: s3
+  access_key_id:
+    secure: "dkLv6xkML1lULPAzle5laFglYBt6mzoTWRrZNwQIReqJeUTEU8vnQ2Ku4nMHEnJZzuR5w/brf39Bgoe0fma38kwsE1ozsSiXxQc/Wm3rtf0n5p2keeFUOk6vAhpMaCVtRXXi+HYzt3lJv8hFyDseBAIyUq8jVVZbBSn8o/0+OTqQ7wa3KKTvazGvH4iJXbwHuHgw3fT+L/umRvaxx4cDbb4uT0n7AdmC1IMyMDBc3r7qszsQESRN7UwFEUGp01LihSUpCxv8F7Zve/2JQjQCtL1TZzvqNmMC6aUSz3n9uoIZLz0kgWYd5q/GH/IlFG04HxmTvB7og2QFsnZP4/+UQYqBHffQ24hwpFGXxjF+zv0DKwMtPzvGQvlibYvnItRDkvpfU/C2HhgN9gtDi8z8n6zVeu51j6y7w93xDcPzIXkCNXy/3XnGl9R4sP9sxlyS4Z2F5ZtGqTc/JSELe2qAQw7hrwpCahmJ9ylE9V+11Vna+W6FX3empShuQq/YhtiHM0XE49R5RSpue5WIQ/QdHW8u0mWD+k8wZ9OZnFgp2aDPYXhhBOVBna9KXngK67GhJb6ZVBZ71aDHYmcb6l0/EAik16hwGWrIhgOar2q/uu8ISDcSROPaC+clU4X62YUdRYTH9vHMJwWO6aBl/vCJSxgWFDr1+b+9+YPvXBVXLYg="
+  secret_access_key:
+    secure: "NpQqIL/vo2fiXLzyeA5r1b+KEBYQmgjtEa3h1l3wjWdeykk3uRbMXxzq9L03NbLoML3iSh+s6LpB1ummEA5FrMdZ9k2kgYJ/wsjO7KJxpLHrq7pdRoDnXp/q5vuOdUf1s4gwUwhjWmstofaaBFfCZkXSroDhWg8bPLVOyG+lA7CVffhO3suq/U6wsl2Vwfepc44zeqDsI2t9PpPvCSlbXM+s9fQxvORwICunmT1itv6RIQHtkP68C52xIWToGd98QfW8gSfUIIxzv1CXKYLn1Koq+bUH3ezPhZF/lVqTkOvPueQFvNeWJUwqT9kZTlmi65S03zifXhqgrKr/v9SPmY5JPoDy4JZ1U6ZMpJlf1axzYPW/dKBMv9yBgzDQ8njiBoTr77lsbGjKLmv8H/3gmcooRCvEXgRMTK4rhvEzSrs3TteUdv1WbtunOQdlx55IKHbACpqz43hqQGOhNVvcNIf2mBtALBs9IpqH15sWoDzd7hKON+95gpnXG7wGgXkrktUdsm2W77ve5BNdQDNysQd3pPN8ECBIj3s7etdViJNhszPiVnLT6mCSeJQgY24JNne0/VLs7i04n6imY2ax26tVNF6Z9ANcCykxI+3z63pBrmvcFFSOKYldSotHGylRf4fEGYnKzjo/V+iA8U+VxDoy2KpitdrOMYt3UGHv/N4="
+  bucket: sjmyuan-ganggang 
+  skip_cleanup: true
+  local_dir: public
