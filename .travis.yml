@@ -26,4 +26,5 @@ deploy:
   bucket: sjmyuan-ganggang 
   skip_cleanup: true
   local_dir: public
+  cache_control: "max-age=259200"
   region: ap-northeast-1
