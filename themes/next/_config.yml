@@ -31,7 +31,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "温暖的港湾"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -50,13 +50,13 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -88,14 +88,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /|| home
-  #about: /about/|| user
-  #tags: /tags/|| tags
-  #categories: /categories/|| th
-  archives: /archives/|| archive
-  #schedule: /schedule/|| calendar
-  #sitemap: /sitemap.xml|| sitemap
-  #commonweal: /404/|| heartbeat
+  home: /
+  #about: /about/||user
+  #tags: /tags/||tags
+  #categories: /categories/||th
+  archives: /archives/
+  #schedule: /schedule/||calendar
+  #sitemap: /sitemap.xml||sitemap
+  #commonweal: /404/||heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -344,7 +344,7 @@ mathjax:
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
-han: false
+han: true
 
 # Swiftype Search API Key
 #swiftype_key:
