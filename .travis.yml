@@ -14,9 +14,8 @@ install:
 script:
   - hexo clean
   - hexo generate
-deploy:
-  provider: script 
-  script: bash scripts/deploy.sh
+after_script:
+  - bash scripts/deploy.sh
 env:
   global:
     - secure: m7Ghq7tRAR+P8nunb61AkggXcuaB+8MsjJZbajfrEtSUMoj6rkjoW9KmT3K9V//opBDNkRZERLsS/rAoHORxjRrDDHuW2nyj63MzV9Pu4GPH5p0xXNmBGZTlgFWHMgsnvYIcVcRGv2FP1PwyNCDVUeYJGDAE7MAcHYMpLb0dKal41shqt8M9G35Jss2gEdnweoPXgX80mioOnReWz2O2wM7TvfEpSxYQXhFdR8ACcZTleP3u0YzTd0wPmC+lSmovHuwDm8qvC75HWb6rYNhMcJbMRDowjRsev6zo+b9+e05jFwmfzH0HMUjO39+cKhvjrVunvNC0zr7doSh3VvZhgweuqKKoDGrP3xn83EdxfDu1vh4Dyg4TphvjKmlN8eXWYevRld+s/s8mobMMqF5Ixv9qJvdyMb48je2JSmUhqs81KX6iS3zDcXwg/ACW2kiQtmVn4iAdmQ1EPdu2a1LIdaQ3d9MBsC8d3LYKxVigF4EfVl81wBwCMqvqLz97wydSU5j6MVZjhctVpVTZO6uFs1XJJrTKq3xcIYzoTXsEQOULOrrnsOcn+FjE7HvAeiKoF1zEjGTS7sCovYUa01sPuhFvmZuPJCUVlCdzo14cEmSmNrZKRyBLSdlDisgSvvbDJ9VLgiPY3BPLROBk3TlDyhQBoJNV/+VBr5v6jc89ekE=
