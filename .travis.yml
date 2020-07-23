@@ -16,6 +16,7 @@ script:
 deploy:
   provider: script
   script: aws s3 sync --region ap-northeast-1 --delete public s3://sjmyuan-ganggang
+  skip_cleanup: true
 
 env:
   global:
