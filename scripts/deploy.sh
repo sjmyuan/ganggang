@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 CURRNT_DIR=$(cd $(dirname "$0"); pwd)
 PUBLIC_FOLDER= "$CURRNT_DIR/../public"
