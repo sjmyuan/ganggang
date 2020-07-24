@@ -28,6 +28,10 @@ $(document).ready(function () {
     });
   });
 
+  particlesJS.load('particles-js', '/config/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
   /**
    * Register JS handlers by condition option.
    * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
