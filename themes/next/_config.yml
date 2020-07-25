@@ -344,7 +344,7 @@ mathjax:
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
-han: true
+han: false
 
 # Swiftype Search API Key
 #swiftype_key:
