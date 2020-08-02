@@ -1,0 +1,6 @@
+#!/bin/bash
+
+hexo clean
+hexo generate
+
+aws s3 sync --cache-control max-age=259200 --region $AWS_REGION --delete public s3://$AWS_BUCKET

@@ -12,6 +12,11 @@ RUN npm install -g hexo-cli
 
 RUN npm install
 
-CMD hexo s
+#ENV AWS_REGION
+#ENV AWS_ACCESS_KEY_ID
+#ENV AWS_SECRET_ACCESS_KEY
+#ENV AWS_BUCKET
+
+CMD auto/deploy
 
 
