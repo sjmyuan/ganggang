@@ -1,6 +1,9 @@
 #!/bin/bash
 
+mkdir -p source/_posts
+aws s3 sync --region $AWS_REGION s3://$AWS_POST_BUCKET source/_posts
+
 hexo clean
 hexo generate
 
-aws s3 sync --cache-control max-age=259200 --region $AWS_REGION --delete public s3://$AWS_BUCKET
+aws s3 sync --cache-control max-age=259200 --region $AWS_REGION --delete public s3://$AWS_SITE_BUCKET
