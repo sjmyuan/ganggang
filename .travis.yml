@@ -10,12 +10,17 @@ before_install:
   - export PATH=$PATH:$HOME/.local/bin
 install:
   - npm install
+
+before_script:
+  - aws s3 cp s3://sjmyuan-ganggang-posts source/_posts --region ap-northeast-1 --recursive
+
 script:
   - hexo clean
   - hexo generate
+
 deploy:
   provider: script
-  script: aws s3 cp source/_posts s3://sjmyuan-ganggang-posts --region ap-northeast-1 --recursive && aws s3 sync --cache-control max-age=259200 --region ap-northeast-1 --delete public s3://sjmyuan-ganggang
+  script: aws s3 sync --cache-control max-age=259200 --region ap-northeast-1 --delete public s3://sjmyuan-ganggang
   skip_cleanup: true
 
 env:
