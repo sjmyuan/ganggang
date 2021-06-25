@@ -23,6 +23,19 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_GANGGANG
           from: public
           to: 's3://sjmyuan-ganggang'
+
+workflows:
+  version: 2
+  daily_build:
+    triggers:
+      - schedule:
+          cron: "0 0 1 * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
 orbs:
   aws-s3: circleci/aws-s3@2.0.0
 version: 2.1
