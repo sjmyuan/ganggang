@@ -10,7 +10,7 @@ jobs:
       - aws-s3/copy:
           arguments: --recursive
           aws-access-key-id: AWS_ACCESS_KEY_ID_GANGGANG
-          aws-region: ap-northeast-1
+          aws-region: AWS_REGION_GANGGANG
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_GANGGANG
           from: 's3://sjmyuan-ganggang-posts'
           to: 'source/_posts'
@@ -19,7 +19,7 @@ jobs:
       - aws-s3/sync:
           arguments: '--cache-control max-age=259200 --delete'
           aws-access-key-id: AWS_ACCESS_KEY_ID_GANGGANG
-          aws-region: ap-northeast-1
+          aws-region: AWS_REGION_GANGGANG
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_GANGGANG
           from: public
           to: 's3://sjmyuan-ganggang'
